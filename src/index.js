@@ -20,7 +20,7 @@ const SvgParser = (props) => {
         const nodeIds = []
 
         // set allowed nodes
-        const allowedNodes = ['polygon', 'rect', 'circle']
+        const allowedNodes = props.allowedShapes
 
         // Insert a unique id to all child nodes
         for (const [i, node] of nodes.entries()) {
@@ -96,7 +96,8 @@ const SvgParser = (props) => {
 SvgParser.defaultProps = {
   hoverBorderColor: '#009cff82',
   defaultHoverBorder: 'black',
-  activeColor: '#009cff82'
+  activeColor: '#009cff82',
+  allowedShapes: ['polygon', 'rect', 'circle']
 }
 
 SvgParser.propTypes = {
@@ -105,7 +106,8 @@ SvgParser.propTypes = {
   hoverBorderColor: PropTypes.string,
   defaultHoverBorder: PropTypes.string,
   activeColor: PropTypes.string,
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
+  allowedShapes: PropTypes.array
 }
 
 export default SvgParser
