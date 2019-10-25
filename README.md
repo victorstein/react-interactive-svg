@@ -1,10 +1,39 @@
-# interactive-svg-react
+# react-interactive-svg
 
 A react component that helps you make svg shapes interactives
 
 ## Coding style
 
 ![GitHub last commit](https://img.shields.io/badge/STYLE-JAVASCRIPT%20STANDARD-yellow.svg?style=for-the-badge&logo=javascript)
+
+## How to use
+
+Import the component and the svg file like so:
+```
+    import { ReactComponent as Svg } from './your-svg-path.svg'
+    import SvgWrapper from 'react-interactive-svg'
+```
+
+Wrap the SVG file using the SvgWrapper component and create a reference inside the svg file
+```
+    <SvgWrapper>
+        <Svg ref={React.createRef()} />
+    </SvgWrapper>
+```
+Insert the neccesary props to the wrapper component
+```
+    ...
+    <SvgWrapper
+        onElementHover={someFunction}
+        onElementClicked={someOtherFunction}
+        hoverBorderColor='#FFFF'
+        activeColor='green'
+        defaultHoverBorder='#000'
+        allowedShapes=['polygon']
+    >
+    ...
+```
+
 
 ## Props
 
