@@ -33,7 +33,25 @@ Insert the neccesary props to the wrapper component
     >
     ...
 ```
+How should a "onElementClicked" function look like?
+```
+    // This function may be async if needed the wrapper will await its execution
+    const elementClicked = async (e) => {
+        // try/catch 'cause we are good devs
+        try {
+            // The function receives the event of the clicked element
 
+            // Do your thing
+            await someOperation()
+
+            // We must return a boolean true/false if we want to change the active color
+            return true
+        } catch (e) {
+            console.log(e)
+            return false
+        }
+    }
+```
 
 ## Props
 
