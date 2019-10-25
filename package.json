@@ -1,6 +1,6 @@
 {
   "name": "react-interactive-svg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A react component that helps you make svg shapes interactives",
   "main": "lib/lib.dist.js",
   "scripts": {
