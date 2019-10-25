@@ -4,7 +4,7 @@
   "description": "A react component that helps you make svg shapes interactives",
   "main": "lib/lib.dist.js",
   "scripts": {
-    "build": "webpack"
+    "build": "babel ./src --out-file ./lib/lib.dist.js -s inline"
   },
   "repository": {
     "type": "git",
@@ -24,17 +24,15 @@
   },
   "homepage": "https://github.com/victorstein/react-interactive-svg#readme",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
-    "babel-loader": "^8.0.6",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "@babel/preset-react": "^7.6.3"
   }
 }
